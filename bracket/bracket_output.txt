@@ -1,0 +1,151 @@
+========================================================================
+  2026 NCAA TOURNAMENT BRACKET - MONTE CARLO CONSENSUS (10,000 sims)
+========================================================================
+
+------------------------------------------------------------------------
+  EAST REGION
+------------------------------------------------------------------------
+
+  Round of 64:
+    > Duke                   93.2%  (vs LIU  6.8%)
+    > Ohio St.               66.1%  (vs TCU 33.9%)
+    > St. John's             76.9%  (vs UNI 23.1%)
+    > Michigan St.           89.1%  (vs Kennesaw St. 10.9%)
+    > Louisville             68.2%  (vs South Florida 31.8%)
+    > Kansas                 86.6%  (vs Troy 13.4%)
+    > Clemson                50.4%  (vs Iowa 49.6%) *toss-up*
+    > UConn                  89.1%  (vs Idaho 10.9%)
+
+  Round of 32:
+    > Duke                   76.8%  (vs Ohio St. 16.4%)
+    > Michigan St.           52.1%  (vs St. John's 40.7%) *toss-up*
+    > Kansas                 45.9%  (vs Louisville 40.0%) *toss-up*
+    > UConn                  60.9%  (vs Iowa 19.5%)
+
+  Sweet 16:
+    > Duke                   57.7%  (vs Michigan St. 18.4%)
+    > UConn                  37.5%  (vs Kansas 21.4%) *toss-up*
+
+  Elite 8:
+    > Duke                   44.3%  (vs UConn 15.0%) *toss-up*
+
+------------------------------------------------------------------------
+  WEST REGION
+------------------------------------------------------------------------
+
+  Round of 64:
+    > Arizona                93.4%  (vs Siena  6.6%)
+    > Georgia                55.4%  (vs Saint Louis 44.6%)
+    > Wisconsin              76.9%  (vs High Point 23.1%)
+    > Arkansas               88.9%  (vs Wright St. 11.1%)
+    > BYU                    58.6%  (vs NC State 41.4%)
+    > Gonzaga                86.7%  (vs Hawaii 13.3%)
+    > UCLA                   65.4%  (vs UCF 34.6%)
+    > Purdue                 91.6%  (vs Queens  8.4%)
+
+  Round of 32:
+    > Arizona                77.4%  (vs Georgia 12.1%)
+    > Arkansas               54.0%  (vs Wisconsin 39.3%) *toss-up*
+    > Gonzaga                57.1%  (vs BYU 24.9%)
+    > Purdue                 69.3%  (vs UCLA 21.5%)
+
+  Sweet 16:
+    > Arizona                57.5%  (vs Arkansas 19.9%)
+    > Purdue                 47.8%  (vs Gonzaga 26.1%) *toss-up*
+
+  Elite 8:
+    > Arizona                39.5%  (vs Purdue 24.3%) *toss-up*
+
+------------------------------------------------------------------------
+  SOUTH REGION
+------------------------------------------------------------------------
+
+  Round of 64:
+    > Florida                92.3%  (vs Furman  7.7%)
+    > Santa Clara            52.3%  (vs Miami (FL) 47.7%) *toss-up*
+    > Illinois               80.4%  (vs McNeese 19.6%)
+    > Alabama                85.2%  (vs Hofstra 14.8%)
+    > Kentucky               60.2%  (vs Missouri 39.8%)
+    > Virginia               86.2%  (vs North Dakota St. 13.8%)
+    > Villanova              52.9%  (vs Texas A&M 47.1%) *toss-up*
+    > Houston                92.5%  (vs Tennessee St.  7.5%)
+
+  Round of 32:
+    > Florida                71.8%  (vs Santa Clara 14.5%)
+    > Illinois               52.8%  (vs Alabama 40.1%) *toss-up*
+    > Virginia               59.0%  (vs Kentucky 24.4%)
+    > Houston                71.8%  (vs Villanova 14.5%)
+
+  Sweet 16:
+    > Florida                42.8%  (vs Illinois 29.5%) *toss-up*
+    > Houston                49.8%  (vs Virginia 26.6%) *toss-up*
+
+  Elite 8:
+    > Florida                27.1%  (vs Houston 25.9%) *toss-up*
+
+------------------------------------------------------------------------
+  MIDWEST REGION
+------------------------------------------------------------------------
+
+  Round of 64:
+    > Michigan               93.1%  (vs UMBC  6.9%)
+    > North Carolina         52.0%  (vs Utah St. 48.0%) *toss-up*
+    > Vanderbilt             100.0%  (vs -  0.0%) LOCK
+    > Nebraska               82.4%  (vs California Baptist 17.6%)
+    > Saint Mary's           71.9%  (vs Miami (OH) 28.1%)
+    > Texas Tech             89.3%  (vs Penn 10.7%)
+    > Tennessee              65.1%  (vs SMU 34.9%)
+    > Iowa St.               84.6%  (vs Akron 15.4%)
+
+  Round of 32:
+    > Michigan               75.4%  (vs North Carolina 12.6%)
+    > Vanderbilt             64.7%  (vs Nebraska 32.8%)
+    > Texas Tech             59.6%  (vs Saint Mary's 31.4%)
+    > Iowa St.               57.5%  (vs Tennessee 28.0%)
+
+  Sweet 16:
+    > Michigan               55.0%  (vs Vanderbilt 25.7%) *toss-up*
+    > Iowa St.               37.7%  (vs Texas Tech 29.2%) *toss-up*
+
+  Elite 8:
+    > Michigan               40.0%  (vs Iowa St. 17.3%) *toss-up*
+
+========================================================================
+  FINAL FOUR - Indianapolis
+========================================================================
+    > Duke                   28.7%  (vs Arizona 24.7%)
+    > Michigan               26.6%  (vs Florida 14.7%)
+
+========================================================================
+  CHAMPIONSHIP
+========================================================================
+    CHAMP: Duke               18.1%  (vs Michigan 15.8%)
+
+========================================================================
+  SUMMARY
+========================================================================
+    Champion:    Duke (18.1%)
+    Final Four:  Duke (44%) / Michigan (40%) / Arizona (39%) / Florida (27%)
+    Vandy path:  R64 100% -> R32 65% -> S16 26% -> FF 13%
+    Simulations: 10,000
+
+  NOTABLE TOSS-UPS (<55% consensus):
+    East Round of 64: Clemson (50.4%) vs Iowa (49.6%)
+    East Round of 32: Michigan St. (52.1%) vs St. John's (40.7%)
+    East Round of 32: Kansas (45.9%) vs Louisville (40.0%)
+    East Sweet 16: UConn (37.5%) vs Kansas (21.4%)
+    East Elite 8: Duke (44.3%) vs UConn (15.0%)
+    West Round of 32: Arkansas (54.0%) vs Wisconsin (39.3%)
+    West Sweet 16: Purdue (47.8%) vs Gonzaga (26.1%)
+    West Elite 8: Arizona (39.5%) vs Purdue (24.3%)
+    South Round of 64: Santa Clara (52.3%) vs Miami (FL) (47.7%)
+    South Round of 64: Villanova (52.9%) vs Texas A&M (47.1%)
+    South Round of 32: Illinois (52.8%) vs Alabama (40.1%)
+    South Sweet 16: Florida (42.8%) vs Illinois (29.5%)
+    South Sweet 16: Houston (49.8%) vs Virginia (26.6%)
+    South Elite 8: Florida (27.1%) vs Houston (25.9%)
+    Midwest Round of 64: North Carolina (52.0%) vs Utah St. (48.0%)
+    Midwest Sweet 16: Michigan (55.0%) vs Vanderbilt (25.7%)
+    Midwest Sweet 16: Iowa St. (37.7%) vs Texas Tech (29.2%)
+    Midwest Elite 8: Michigan (40.0%) vs Iowa St. (17.3%)
+
