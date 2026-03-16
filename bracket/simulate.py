@@ -67,6 +67,16 @@ IDX_EXP_RANK = 43
 
 ROUND_NAMES = ["Round of 64", "Round of 32", "Sweet 16", "Elite 8", "Final Four", "Championship"]
 
+# ── Locked upset overrides ──
+# Keyed by (team_a, team_b) tuple → forced P(team_a wins).
+# Checked in both directions: (a,b) and (b,a).
+# Set value to 1.0 to force team_a to win, 0.0 to force team_b to win.
+# Vanderbilt always wins Round of 64 (5-seed upset lock).
+# Add more overrides here as picks are finalized.
+LOCKED_UPSETS: dict[tuple[str, str], float] = {
+    ("Vanderbilt", "VCU"): 1.0,
+}
+
 
 def load_torvik_stats(year: int = 2026) -> dict[str, dict]:
     """Load Torvik stats into a dict keyed by team name."""
@@ -130,8 +140,15 @@ def compute_features(a: dict, b: dict) -> np.ndarray:
 
 
 def predict_win_prob(model, stats_a: dict, stats_b: dict,
-                     seed_a: int, seed_b: int) -> float:
-    """Predict P(team_a wins) with variance regression + seed calibration."""
+                     seed_a: int, seed_b: int,
+                     name_a: str = "", name_b: str = "") -> float:
+    """Predict P(team_a wins) with locked overrides, variance regression + seed calibration."""
+    # Check locked upset overrides (both directions)
+    if (name_a, name_b) in LOCKED_UPSETS:
+        return LOCKED_UPSETS[(name_a, name_b)]
+    if (name_b, name_a) in LOCKED_UPSETS:
+        return 1.0 - LOCKED_UPSETS[(name_b, name_a)]
+
     features = compute_features(stats_a, stats_b).reshape(1, -1)
     raw = model.predict_proba(features)[0][1]
     # Variance regression: 12% toward 50%
@@ -151,7 +168,8 @@ def simulate_game(model, team_a: dict, team_b: dict,
     stats_a = get_team_stats(team_a["name"], torvik)
     stats_b = get_team_stats(team_b["name"], torvik)
     prob_a = predict_win_prob(model, stats_a, stats_b,
-                              team_a["seed"], team_b["seed"])
+                              team_a["seed"], team_b["seed"],
+                              team_a["name"], team_b["name"])
     winner = team_a if rng.random() < prob_a else team_b
     return winner, prob_a
 
