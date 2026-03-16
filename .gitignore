@@ -2,3 +2,4 @@
 .beads/
 mcp_filesystem.log
 sqlite_mcp_server.db
+__pycache__/
