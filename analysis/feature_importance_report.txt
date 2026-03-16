@@ -1,0 +1,180 @@
+========================================================================
+FEATURE IMPORTANCE ANALYSIS: MARCH MADNESS TOURNAMENT PREDICTION
+Data: 18 seasons (2008-2025), 6324 team-seasons
+========================================================================
+
+## 1. PEARSON CORRELATIONS vs RANK (lower rank = better team)
+Feature                 r      |r|  Direction
+--------------------------------------------------
+Barthag           -0.9965   0.9965  ↑ better team
+AdjEM             -0.9798   0.9798  ↑ better team
+Margin            -0.9156   0.9156  ↑ better team
+AdjOE             -0.8545   0.8545  ↑ better team
+AdjDE              0.8298   0.8298  ↓ better team
+WinPct            -0.7972   0.7972  ↑ better team
+EFG%              -0.7575   0.7575  ↑ better team
+FTR               -0.7201   0.7201  ↑ better team
+AdjOE_v2          -0.6979   0.6979  ↑ better team
+WAB               -0.6855   0.6855  ↑ better team
+RawOE             -0.6696   0.6696  ↑ better team
+RawDE              0.6600   0.6600  ↓ better team
+CloseWin%         -0.5590   0.5590  ↑ better team
+ConfWinPct        -0.5590   0.5590  ↑ better team
+AdjDE_v2           0.5508   0.5508  ↓ better team
+SOS_Ratio_O       -0.4414   0.4414  ↑ better team
+SOS               -0.3305   0.3305  ↑ better team
+Luck              -0.2348   0.2348  ↑ better team
+EFGD%             -0.2129   0.2129  ↑ better team
+SOS_Ratio_D        0.1984   0.1984  ↓ better team
+SOS_Avg           -0.1322   0.1322  ↑ better team
+Tempo              0.0673   0.0673  ↓ better team
+OppSOS             0.0158   0.0158  ↓ better team
+
+## 2. MULTIVARIATE OLS REGRESSION (predicting rank)
+R² = 0.9698 (variance explained)
+
+Feature           Std Coeff  Interpretation
+-------------------------------------------------------
+WinPct              -67.588  strong predictor
+EFG%                -53.457  strong predictor
+Luck                 20.637  strong predictor
+AdjDE                 9.278  moderate
+AdjOE                -7.746  moderate
+WAB                   7.479  moderate
+Tempo                 1.035  weak
+SOS_Ratio_O          -0.667  weak
+CloseWin%             0.491  weak
+ConfWinPct            0.491  weak
+EFGD%                 0.366  weak
+
+Single-feature R²: Barthag=0.9930, AdjEM=0.9601
+Multicollinearity check: AdjEM↔AdjOE r=0.8806, AdjEM↔AdjDE r=-0.8371
+⚠ AdjEM = AdjOE - AdjDE by definition → perfect multicollinearity if all three included
+
+## 3. ELITE vs BUBBLE EFFECT SIZES (Cohen's d)
+Elite = rank 1-16 (top seeds), Bubble = rank 30-50 (tournament fringe)
+Elite teams: 288, Bubble teams: 378
+
+Feature           Cohen d    Elite μ   Bubble μ  Effect
+-----------------------------------------------------------------
+Barthag             4.798     0.9383     0.8481  huge
+AdjEM               3.666    25.3448    15.6275  huge
+Margin              2.473     6.5411     1.0200  huge
+WinPct              1.515     0.7928     0.6651  very large
+AdjOE               1.438   117.9722   112.0679  very large
+AdjOE_v2            1.243   117.5549   111.8451  very large
+AdjDE              -1.149    92.6274    96.4404  large
+CloseWin%           1.116     0.7706     0.6134  large
+ConfWinPct          1.116     0.7706     0.6134  large
+AdjDE_v2           -0.990    92.4810    96.2578  large
+SOS_Ratio_O         0.964     1.1154     1.0665  large
+WAB                 0.843    15.2083    11.6217  large
+EFG%                0.663     0.6987     0.6557  medium
+SOS_Ratio_D        -0.634     0.9772     1.0122  medium
+RawOE               0.517   109.0769   107.7936  medium
+RawDE              -0.505    99.1016   100.0721  medium
+SOS                 0.501  1344.8993  1278.7354  medium
+EFGD%               0.426     0.5470     0.5145  small
+FTR                 0.368     0.7628     0.7221  small
+OppSOS             -0.251  1180.0625  1215.2196  small
+Luck                0.125     0.0214     0.0149  negligible
+SOS_Avg             0.065  1205.7605  1198.8826  negligible
+Tempo               0.037    66.3558    66.2437  negligible
+
+## 4. OFFENSE vs DEFENSE COMPARISON
+Which matters more for predicting rank: offensive or defensive metrics?
+
+Metric              Off r    Def r     Winner
+--------------------------------------------------
+AdjOE/AdjDE        0.8545   0.8298    OFFENSE
+EFG%/EFGD%        0.7575   0.2129    OFFENSE
+RawOE/RawDE        0.6696   0.6600    OFFENSE
+AdjOE_v2/AdjDE_v2     0.6979   0.5508    OFFENSE
+
+Average |r|: Offense=0.7449, Defense=0.5633
+→ Offense is slightly more predictive overall
+
+## 5. EXPERIENCE & TEMPO FACTOR ANALYSIS
+Tempo vs Rank: r=0.0673 (|r|=0.0673)
+Mean tempo: Elite=66.36, All teams=66.62
+
+Luck vs Rank: r=-0.2348
+Luck range: [-0.2095, 0.2104], mean=-0.0017
+→ Luck is near-zero signal (as expected — it's noise by definition)
+
+CloseWin% vs Rank: r=-0.5590
+→ Close game performance is partially luck-driven, limited predictive value
+
+SOS_Ratio_O vs Rank: r=-0.4414
+SOS_Ratio_D vs Rank: r=0.1984
+
+## 6. PAIRWISE MATCHUP GAP ANALYSIS
+How well does each feature's gap predict which team is ranked higher?
+(Sampled 50,000 random pairings across all team-seasons)
+
+Feature            Accuracy  Notes
+--------------------------------------------------
+Barthag              98.3%  ★ top predictor
+AdjEM                98.3%  ★ top predictor
+Margin               88.9%  ★ top predictor
+AdjOE                84.3%  strong
+AdjOE_v2             82.4%  strong
+AdjDE                82.0%  strong
+WinPct               80.3%  strong
+AdjDE_v2             79.1%  moderate
+EFG%                 77.3%  moderate
+FTR                  75.3%  moderate
+RawOE                74.1%  moderate
+WAB                  73.5%  moderate
+RawDE                73.2%  moderate
+CloseWin%            69.8%  weak
+ConfWinPct           69.8%  weak
+SOS_Ratio_O          68.6%  weak
+SOS_Ratio_D          61.4%  weak
+SOS                  61.2%  weak
+Luck                 58.3%  weak
+EFGD%                58.1%  weak
+SOS_Avg              53.1%  weak
+Tempo                52.2%  weak
+OppSOS               52.1%  weak
+
+========================================================================
+## 7. SUMMARY & RECOMMENDED FEATURE WEIGHTS
+========================================================================
+
+KEY FINDINGS:
+1. Barthag is the single strongest predictor of team quality (r ≈ -0.99 with rank)
+2. AdjEM (= AdjOE - AdjDE) is perfectly multicollinear with AdjOE and AdjDE
+   → Use AdjOE + AdjDE separately OR AdjEM alone, never all three
+3. Offensive and defensive efficiency are both strong, with offense slightly more
+   predictive in isolation
+4. WAB (Wins Above Bubble) is a strong composite predictor
+5. Luck and Tempo are near-zero signal for tournament prediction
+6. SOS matters moderately — teams from stronger conferences tend to be better
+7. Close game win% has limited predictive value (partially luck-driven)
+
+RECOMMENDED FEATURE WEIGHTS FOR PREDICTION MODEL:
+(Normalized weights summing to 1.0 for a weighted composite score)
+
+Feature            Weight  Rationale
+-----------------------------------------------------------------
+Barthag              0.30  |r|=0.997
+AdjOE                0.15  |r|=0.855
+AdjDE                0.15  |r|=0.830
+WAB                  0.12  |r|=0.686
+EFG%                 0.06  |r|=0.758
+EFGD%                0.06  |r|=0.213
+SOS_Ratio_O          0.05  |r|=0.441
+SOS_Ratio_D          0.05  |r|=0.198
+WinPct               0.04  |r|=0.797
+Tempo                0.01  |r|=0.067
+Luck                 0.01  |r|=0.235
+
+Total: 1.00
+
+NOTES FOR DOWNSTREAM MODEL (mm-cn6):
+- Drop AdjEM if using AdjOE + AdjDE (multicollinearity)
+- Barthag alone explains ~99% of rank variance — other features add marginal lift
+- For logistic regression on tournament outcomes, consider using Barthag + WAB + SOS
+  as the core feature set, with EFG%/EFGD% as secondary features
+- Tempo and Luck should be excluded or given minimal weight
