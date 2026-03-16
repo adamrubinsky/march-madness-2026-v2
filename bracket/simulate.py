@@ -267,6 +267,119 @@ def simulate_tournament(model, bracket: dict, torvik: dict,
     }
 
 
+def run_monte_carlo(model, bracket: dict, torvik: dict,
+                    n_sims: int = 10000) -> dict:
+    """Run N tournament simulations, aggregate win frequencies per round."""
+    from collections import Counter
+
+    # Track wins per (region, round_index, game_index) → Counter of team names
+    # Also track Final Four appearances, championship appearances, and titles
+    round_wins: dict[tuple, Counter] = {}
+    final_four_counts: Counter = Counter()
+    champion_counts: Counter = Counter()
+    runner_up_counts: Counter = Counter()
+
+    for i in range(n_sims):
+        # Suppress print output during bulk sims
+        old_stdout = sys.stdout
+        sys.stdout = open(os.devnull, "w")
+        try:
+            result = simulate_tournament(model, bracket, torvik, seed=i)
+        finally:
+            sys.stdout.close()
+            sys.stdout = old_stdout
+
+        champion_counts[result["champion"]["name"]] += 1
+        runner_up_counts[result["runner_up"]["name"]] += 1
+        for rname, rdata in result["final_four"].items():
+            final_four_counts[rdata["name"]] += 1
+
+        # Tally per-game winners across rounds
+        for rd in result["rounds"]:
+            round_name = rd["round"]
+            region = rd["region"]
+            for gi, game in enumerate(rd["games"]):
+                key = (region, round_name, gi)
+                if key not in round_wins:
+                    round_wins[key] = Counter()
+                round_wins[key][game["winner"]["name"]] += 1
+
+    # Build consensus bracket: for each game slot, pick the most frequent winner
+    # Re-run one sim with seed=0 just to get the bracket structure/matchup labels
+    old_stdout = sys.stdout
+    sys.stdout = open(os.devnull, "w")
+    try:
+        template = simulate_tournament(model, bracket, torvik, seed=0)
+    finally:
+        sys.stdout.close()
+        sys.stdout = old_stdout
+
+    consensus_rounds = []
+    for rd in template["rounds"]:
+        round_name = rd["round"]
+        region = rd["region"]
+        games = []
+        for gi, game in enumerate(rd["games"]):
+            key = (region, round_name, gi)
+            counter = round_wins.get(key, Counter())
+            top_team, top_count = counter.most_common(1)[0] if counter else ("???", 0)
+            pct = top_count / n_sims
+            games.append({
+                "consensus_winner": top_team,
+                "win_pct": round(pct, 4),
+                "matchup": f"{game['winner']['name']} vs {game['loser']['name']}",
+                "all_winners": {t: round(c / n_sims, 4) for t, c in counter.most_common()},
+            })
+        consensus_rounds.append({"round": round_name, "region": region, "games": games})
+
+    top_champ, top_champ_n = champion_counts.most_common(1)[0]
+    top_ff = {name: round(cnt / n_sims, 4) for name, cnt in final_four_counts.most_common()}
+
+    mc_results = {
+        "n_simulations": n_sims,
+        "champion": {"name": top_champ, "win_pct": round(top_champ_n / n_sims, 4)},
+        "champion_distribution": {t: round(c / n_sims, 4) for t, c in champion_counts.most_common(10)},
+        "final_four_pct": top_ff,
+        "consensus_bracket": consensus_rounds,
+    }
+    return mc_results
+
+
+def print_monte_carlo_bracket(mc: dict) -> None:
+    """Print a full bracket with consensus picks and probabilities."""
+    n = mc["n_simulations"]
+    print(f"\n{'='*70}")
+    print(f"  MONTE CARLO BRACKET — {n:,} simulations")
+    print(f"{'='*70}")
+
+    for rd in mc["consensus_bracket"]:
+        round_name = rd["round"]
+        region = rd["region"]
+        header = f"{region} — {round_name}" if region != round_name else round_name
+        print(f"\n  ── {header} ──")
+        for g in rd["games"]:
+            winners = g["all_winners"]
+            # Show top 2 contenders
+            teams = list(winners.items())
+            line = f"    {teams[0][0]} ({teams[0][1]:.0%})"
+            if len(teams) > 1:
+                line += f"  /  {teams[1][0]} ({teams[1][1]:.0%})"
+            print(line)
+
+    print(f"\n{'='*70}")
+    print(f"  CHAMPION: {mc['champion']['name']} ({mc['champion']['win_pct']:.1%})")
+    print(f"{'='*70}")
+
+    print(f"\n  Top 10 Championship Contenders:")
+    for name, pct in mc["champion_distribution"].items():
+        bar = "█" * int(pct * 50)
+        print(f"    {name:<20s} {pct:6.1%} {bar}")
+
+    print(f"\n  Final Four Appearance Rates:")
+    for name, pct in sorted(mc["final_four_pct"].items(), key=lambda x: -x[1])[:10]:
+        print(f"    {name:<20s} {pct:6.1%}")
+
+
 def main():
     # Load bracket
     bracket_path = BRACKET_DIR / "bracket_2026.json"
@@ -292,7 +405,23 @@ def main():
     if missing:
         print(f"⚠ Teams without Torvik data: {missing}\n")
 
-    # Simulate
+    # Monte Carlo mode
+    if "--monte-carlo" in sys.argv:
+        n = 10000
+        for i, arg in enumerate(sys.argv):
+            if arg == "--sims" and i + 1 < len(sys.argv):
+                n = int(sys.argv[i + 1])
+        print(f"Running {n:,} Monte Carlo simulations...")
+        mc = run_monte_carlo(model, bracket, torvik, n_sims=n)
+        print_monte_carlo_bracket(mc)
+        # Save results
+        out = BRACKET_DIR / "monte_carlo_results.json"
+        with open(out, "w") as f:
+            json.dump(mc, f, indent=2)
+        print(f"\nResults saved to {out}")
+        return
+
+    # Single simulation mode (original behavior)
     print("=" * 60)
     print("2026 NCAA TOURNAMENT SIMULATION")
     print("=" * 60)
@@ -301,7 +430,6 @@ def main():
 
     # Save results
     output_path = BRACKET_DIR / "simulation_results.json"
-    # Convert for JSON serialization
     serializable = {
         "champion": results["champion"],
         "runner_up": results["runner_up"],

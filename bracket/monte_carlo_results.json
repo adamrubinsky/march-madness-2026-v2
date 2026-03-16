@@ -1,0 +1,977 @@
+{
+  "n_simulations": 10000,
+  "champion": {
+    "name": "Duke",
+    "win_pct": 0.1805
+  },
+  "champion_distribution": {
+    "Duke": 0.1805,
+    "Michigan": 0.1585,
+    "Arizona": 0.1462,
+    "Florida": 0.0762,
+    "Houston": 0.0665,
+    "Purdue": 0.0634,
+    "Illinois": 0.0473,
+    "Iowa St.": 0.0411,
+    "UConn": 0.0266,
+    "Vanderbilt": 0.0257
+  },
+  "final_four_pct": {
+    "Duke": 0.4426,
+    "Michigan": 0.4004,
+    "Arizona": 0.3945,
+    "Florida": 0.2713,
+    "Houston": 0.2594,
+    "Purdue": 0.2434,
+    "Illinois": 0.1796,
+    "Iowa St.": 0.1726,
+    "UConn": 0.1504,
+    "Vanderbilt": 0.1338,
+    "Texas Tech": 0.1164,
+    "Gonzaga": 0.1092,
+    "Virginia": 0.106,
+    "Michigan St.": 0.1031,
+    "Arkansas": 0.0934,
+    "Alabama": 0.0902,
+    "St. John's": 0.0772,
+    "Louisville": 0.075,
+    "Kansas": 0.0624,
+    "Wisconsin": 0.0599,
+    "Tennessee": 0.0527,
+    "Nebraska": 0.045,
+    "Saint Mary's": 0.0359,
+    "Ohio St.": 0.0322,
+    "UCLA": 0.0315,
+    "Iowa": 0.024,
+    "Kentucky": 0.0226,
+    "BYU": 0.0223,
+    "North Carolina": 0.0188,
+    "Georgia": 0.0184,
+    "Clemson": 0.0182,
+    "Santa Clara": 0.0181,
+    "Villanova": 0.0159,
+    "Utah St.": 0.0134,
+    "Miami (FL)": 0.013,
+    "Texas A&M": 0.0129,
+    "NC State": 0.0111,
+    "Saint Louis": 0.0091,
+    "Missouri": 0.0088,
+    "South Florida": 0.0081,
+    "SMU": 0.0057,
+    "UCF": 0.005,
+    "TCU": 0.0048,
+    "Akron": 0.0026,
+    "Miami (OH)": 0.002,
+    "High Point": 0.0017,
+    "McNeese": 0.0014,
+    "UNI": 0.001,
+    "Hofstra": 0.0006,
+    "Kennesaw St.": 0.0005,
+    "Idaho": 0.0003,
+    "UMBC": 0.0003,
+    "California Baptist": 0.0002,
+    "Hawaii": 0.0002,
+    "Penn": 0.0002,
+    "North Dakota St.": 0.0002,
+    "Troy": 0.0001,
+    "Wright St.": 0.0001,
+    "Siena": 0.0001,
+    "Queens": 0.0001,
+    "LIU": 0.0001
+  },
+  "consensus_bracket": [
+    {
+      "round": "Round of 64",
+      "region": "East",
+      "games": [
+        {
+          "consensus_winner": "Duke",
+          "win_pct": 0.9324,
+          "matchup": "Duke vs LIU",
+          "all_winners": {
+            "Duke": 0.9324,
+            "LIU": 0.0676
+          }
+        },
+        {
+          "consensus_winner": "Ohio St.",
+          "win_pct": 0.6609,
+          "matchup": "TCU vs Ohio St.",
+          "all_winners": {
+            "Ohio St.": 0.6609,
+            "TCU": 0.3391
+          }
+        },
+        {
+          "consensus_winner": "St. John's",
+          "win_pct": 0.7691,
+          "matchup": "St. John's vs UNI",
+          "all_winners": {
+            "St. John's": 0.7691,
+            "UNI": 0.2309
+          }
+        },
+        {
+          "consensus_winner": "Michigan St.",
+          "win_pct": 0.8906,
+          "matchup": "Michigan St. vs Kennesaw St.",
+          "all_winners": {
+            "Michigan St.": 0.8906,
+            "Kennesaw St.": 0.1094
+          }
+        },
+        {
+          "consensus_winner": "Louisville",
+          "win_pct": 0.6824,
+          "matchup": "Louisville vs South Florida",
+          "all_winners": {
+            "Louisville": 0.6824,
+            "South Florida": 0.3176
+          }
+        },
+        {
+          "consensus_winner": "Kansas",
+          "win_pct": 0.8663,
+          "matchup": "Kansas vs Troy",
+          "all_winners": {
+            "Kansas": 0.8663,
+            "Troy": 0.1337
+          }
+        },
+        {
+          "consensus_winner": "Clemson",
+          "win_pct": 0.5036,
+          "matchup": "Clemson vs Iowa",
+          "all_winners": {
+            "Clemson": 0.5036,
+            "Iowa": 0.4964
+          }
+        },
+        {
+          "consensus_winner": "UConn",
+          "win_pct": 0.8907,
+          "matchup": "UConn vs Idaho",
+          "all_winners": {
+            "UConn": 0.8907,
+            "Idaho": 0.1093
+          }
+        }
+      ]
+    },
+    {
+      "round": "Round of 32",
+      "region": "East",
+      "games": [
+        {
+          "consensus_winner": "Duke",
+          "win_pct": 0.7675,
+          "matchup": "TCU vs Duke",
+          "all_winners": {
+            "Duke": 0.7675,
+            "Ohio St.": 0.1643,
+            "TCU": 0.0591,
+            "LIU": 0.0091
+          }
+        },
+        {
+          "consensus_winner": "Michigan St.",
+          "win_pct": 0.5206,
+          "matchup": "St. John's vs Michigan St.",
+          "all_winners": {
+            "Michigan St.": 0.5206,
+            "St. John's": 0.4069,
+            "UNI": 0.0535,
+            "Kennesaw St.": 0.019
+          }
+        },
+        {
+          "consensus_winner": "Kansas",
+          "win_pct": 0.4589,
+          "matchup": "Kansas vs Louisville",
+          "all_winners": {
+            "Kansas": 0.4589,
+            "Louisville": 0.3998,
+            "South Florida": 0.1222,
+            "Troy": 0.0191
+          }
+        },
+        {
+          "consensus_winner": "UConn",
+          "win_pct": 0.6093,
+          "matchup": "UConn vs Clemson",
+          "all_winners": {
+            "UConn": 0.6093,
+            "Iowa": 0.1946,
+            "Clemson": 0.1791,
+            "Idaho": 0.017
+          }
+        }
+      ]
+    },
+    {
+      "round": "Sweet 16",
+      "region": "East",
+      "games": [
+        {
+          "consensus_winner": "Duke",
+          "win_pct": 0.5772,
+          "matchup": "St. John's vs TCU",
+          "all_winners": {
+            "Duke": 0.5772,
+            "Michigan St.": 0.1845,
+            "St. John's": 0.1437,
+            "Ohio St.": 0.0696,
+            "TCU": 0.0167,
+            "UNI": 0.0049,
+            "Kennesaw St.": 0.0022,
+            "LIU": 0.0012
+          }
+        },
+        {
+          "consensus_winner": "UConn",
+          "win_pct": 0.3747,
+          "matchup": "UConn vs Kansas",
+          "all_winners": {
+            "UConn": 0.3747,
+            "Kansas": 0.2138,
+            "Louisville": 0.2027,
+            "Iowa": 0.0894,
+            "Clemson": 0.0774,
+            "South Florida": 0.037,
+            "Troy": 0.0025,
+            "Idaho": 0.0025
+          }
+        }
+      ]
+    },
+    {
+      "round": "Elite 8",
+      "region": "East",
+      "games": [
+        {
+          "consensus_winner": "Duke",
+          "win_pct": 0.4426,
+          "matchup": "St. John's vs UConn",
+          "all_winners": {
+            "Duke": 0.4426,
+            "UConn": 0.1504,
+            "Michigan St.": 0.1031,
+            "St. John's": 0.0772,
+            "Louisville": 0.075,
+            "Kansas": 0.0624,
+            "Ohio St.": 0.0322,
+            "Iowa": 0.024,
+            "Clemson": 0.0182,
+            "South Florida": 0.0081,
+            "TCU": 0.0048,
+            "UNI": 0.001,
+            "Kennesaw St.": 0.0005,
+            "Idaho": 0.0003,
+            "Troy": 0.0001,
+            "LIU": 0.0001
+          }
+        }
+      ]
+    },
+    {
+      "round": "Round of 64",
+      "region": "West",
+      "games": [
+        {
+          "consensus_winner": "Arizona",
+          "win_pct": 0.934,
+          "matchup": "Arizona vs Siena",
+          "all_winners": {
+            "Arizona": 0.934,
+            "Siena": 0.066
+          }
+        },
+        {
+          "consensus_winner": "Georgia",
+          "win_pct": 0.5535,
+          "matchup": "Georgia vs Saint Louis",
+          "all_winners": {
+            "Georgia": 0.5535,
+            "Saint Louis": 0.4465
+          }
+        },
+        {
+          "consensus_winner": "Wisconsin",
+          "win_pct": 0.769,
+          "matchup": "High Point vs Wisconsin",
+          "all_winners": {
+            "Wisconsin": 0.769,
+            "High Point": 0.231
+          }
+        },
+        {
+          "consensus_winner": "Arkansas",
+          "win_pct": 0.8891,
+          "matchup": "Arkansas vs Wright St.",
+          "all_winners": {
+            "Arkansas": 0.8891,
+            "Wright St.": 0.1109
+          }
+        },
+        {
+          "consensus_winner": "BYU",
+          "win_pct": 0.5857,
+          "matchup": "NC State vs BYU",
+          "all_winners": {
+            "BYU": 0.5857,
+            "NC State": 0.4143
+          }
+        },
+        {
+          "consensus_winner": "Gonzaga",
+          "win_pct": 0.8668,
+          "matchup": "Hawaii vs Gonzaga",
+          "all_winners": {
+            "Gonzaga": 0.8668,
+            "Hawaii": 0.1332
+          }
+        },
+        {
+          "consensus_winner": "UCLA",
+          "win_pct": 0.6538,
+          "matchup": "UCF vs UCLA",
+          "all_winners": {
+            "UCLA": 0.6538,
+            "UCF": 0.3462
+          }
+        },
+        {
+          "consensus_winner": "Purdue",
+          "win_pct": 0.9159,
+          "matchup": "Purdue vs Queens",
+          "all_winners": {
+            "Purdue": 0.9159,
+            "Queens": 0.0841
+          }
+        }
+      ]
+    },
+    {
+      "round": "Round of 32",
+      "region": "West",
+      "games": [
+        {
+          "consensus_winner": "Arizona",
+          "win_pct": 0.7743,
+          "matchup": "Arizona vs Georgia",
+          "all_winners": {
+            "Arizona": 0.7743,
+            "Georgia": 0.1207,
+            "Saint Louis": 0.0956,
+            "Siena": 0.0094
+          }
+        },
+        {
+          "consensus_winner": "Arkansas",
+          "win_pct": 0.5402,
+          "matchup": "High Point vs Arkansas",
+          "all_winners": {
+            "Arkansas": 0.5402,
+            "Wisconsin": 0.3934,
+            "High Point": 0.046,
+            "Wright St.": 0.0204
+          }
+        },
+        {
+          "consensus_winner": "Gonzaga",
+          "win_pct": 0.5711,
+          "matchup": "NC State vs Hawaii",
+          "all_winners": {
+            "Gonzaga": 0.5711,
+            "BYU": 0.249,
+            "NC State": 0.1524,
+            "Hawaii": 0.0275
+          }
+        },
+        {
+          "consensus_winner": "Purdue",
+          "win_pct": 0.6926,
+          "matchup": "UCF vs Purdue",
+          "all_winners": {
+            "Purdue": 0.6926,
+            "UCLA": 0.2153,
+            "UCF": 0.0799,
+            "Queens": 0.0122
+          }
+        }
+      ]
+    },
+    {
+      "round": "Sweet 16",
+      "region": "West",
+      "games": [
+        {
+          "consensus_winner": "Arizona",
+          "win_pct": 0.5745,
+          "matchup": "High Point vs Arizona",
+          "all_winners": {
+            "Arizona": 0.5745,
+            "Arkansas": 0.1993,
+            "Wisconsin": 0.1366,
+            "Georgia": 0.0489,
+            "Saint Louis": 0.0318,
+            "High Point": 0.0072,
+            "Wright St.": 0.0011,
+            "Siena": 0.0006
+          }
+        },
+        {
+          "consensus_winner": "Purdue",
+          "win_pct": 0.478,
+          "matchup": "NC State vs UCF",
+          "all_winners": {
+            "Purdue": 0.478,
+            "Gonzaga": 0.2614,
+            "UCLA": 0.0985,
+            "BYU": 0.0845,
+            "NC State": 0.0449,
+            "UCF": 0.0276,
+            "Hawaii": 0.004,
+            "Queens": 0.0011
+          }
+        }
+      ]
+    },
+    {
+      "round": "Elite 8",
+      "region": "West",
+      "games": [
+        {
+          "consensus_winner": "Arizona",
+          "win_pct": 0.3945,
+          "matchup": "NC State vs High Point",
+          "all_winners": {
+            "Arizona": 0.3945,
+            "Purdue": 0.2434,
+            "Gonzaga": 0.1092,
+            "Arkansas": 0.0934,
+            "Wisconsin": 0.0599,
+            "UCLA": 0.0315,
+            "BYU": 0.0223,
+            "Georgia": 0.0184,
+            "NC State": 0.0111,
+            "Saint Louis": 0.0091,
+            "UCF": 0.005,
+            "High Point": 0.0017,
+            "Hawaii": 0.0002,
+            "Wright St.": 0.0001,
+            "Siena": 0.0001,
+            "Queens": 0.0001
+          }
+        }
+      ]
+    },
+    {
+      "round": "Round of 64",
+      "region": "South",
+      "games": [
+        {
+          "consensus_winner": "Florida",
+          "win_pct": 0.9232,
+          "matchup": "Florida vs Furman",
+          "all_winners": {
+            "Florida": 0.9232,
+            "Furman": 0.0768
+          }
+        },
+        {
+          "consensus_winner": "Santa Clara",
+          "win_pct": 0.5226,
+          "matchup": "Santa Clara vs Miami (FL)",
+          "all_winners": {
+            "Santa Clara": 0.5226,
+            "Miami (FL)": 0.4774
+          }
+        },
+        {
+          "consensus_winner": "Illinois",
+          "win_pct": 0.8043,
+          "matchup": "Illinois vs McNeese",
+          "all_winners": {
+            "Illinois": 0.8043,
+            "McNeese": 0.1957
+          }
+        },
+        {
+          "consensus_winner": "Alabama",
+          "win_pct": 0.8517,
+          "matchup": "Alabama vs Hofstra",
+          "all_winners": {
+            "Alabama": 0.8517,
+            "Hofstra": 0.1483
+          }
+        },
+        {
+          "consensus_winner": "Kentucky",
+          "win_pct": 0.6019,
+          "matchup": "Kentucky vs Missouri",
+          "all_winners": {
+            "Kentucky": 0.6019,
+            "Missouri": 0.3981
+          }
+        },
+        {
+          "consensus_winner": "Virginia",
+          "win_pct": 0.8616,
+          "matchup": "Virginia vs North Dakota St.",
+          "all_winners": {
+            "Virginia": 0.8616,
+            "North Dakota St.": 0.1384
+          }
+        },
+        {
+          "consensus_winner": "Villanova",
+          "win_pct": 0.5286,
+          "matchup": "Texas A&M vs Villanova",
+          "all_winners": {
+            "Villanova": 0.5286,
+            "Texas A&M": 0.4714
+          }
+        },
+        {
+          "consensus_winner": "Houston",
+          "win_pct": 0.9247,
+          "matchup": "Houston vs Tennessee St.",
+          "all_winners": {
+            "Houston": 0.9247,
+            "Tennessee St.": 0.0753
+          }
+        }
+      ]
+    },
+    {
+      "round": "Round of 32",
+      "region": "South",
+      "games": [
+        {
+          "consensus_winner": "Florida",
+          "win_pct": 0.7181,
+          "matchup": "Santa Clara vs Florida",
+          "all_winners": {
+            "Florida": 0.7181,
+            "Santa Clara": 0.1452,
+            "Miami (FL)": 0.1292,
+            "Furman": 0.0075
+          }
+        },
+        {
+          "consensus_winner": "Illinois",
+          "win_pct": 0.5283,
+          "matchup": "Alabama vs Illinois",
+          "all_winners": {
+            "Illinois": 0.5283,
+            "Alabama": 0.401,
+            "McNeese": 0.0472,
+            "Hofstra": 0.0235
+          }
+        },
+        {
+          "consensus_winner": "Virginia",
+          "win_pct": 0.5899,
+          "matchup": "Virginia vs Kentucky",
+          "all_winners": {
+            "Virginia": 0.5899,
+            "Kentucky": 0.2444,
+            "Missouri": 0.1331,
+            "North Dakota St.": 0.0326
+          }
+        },
+        {
+          "consensus_winner": "Houston",
+          "win_pct": 0.7181,
+          "matchup": "Houston vs Texas A&M",
+          "all_winners": {
+            "Houston": 0.7181,
+            "Villanova": 0.1446,
+            "Texas A&M": 0.1281,
+            "Tennessee St.": 0.0092
+          }
+        }
+      ]
+    },
+    {
+      "round": "Sweet 16",
+      "region": "South",
+      "games": [
+        {
+          "consensus_winner": "Florida",
+          "win_pct": 0.4283,
+          "matchup": "Alabama vs Santa Clara",
+          "all_winners": {
+            "Florida": 0.4283,
+            "Illinois": 0.2952,
+            "Alabama": 0.1809,
+            "Santa Clara": 0.0478,
+            "Miami (FL)": 0.0365,
+            "McNeese": 0.0074,
+            "Hofstra": 0.0033,
+            "Furman": 0.0006
+          }
+        },
+        {
+          "consensus_winner": "Houston",
+          "win_pct": 0.4982,
+          "matchup": "Virginia vs Houston",
+          "all_winners": {
+            "Houston": 0.4982,
+            "Virginia": 0.2661,
+            "Kentucky": 0.0792,
+            "Villanova": 0.0598,
+            "Texas A&M": 0.0521,
+            "Missouri": 0.0386,
+            "North Dakota St.": 0.0051,
+            "Tennessee St.": 0.0009
+          }
+        }
+      ]
+    },
+    {
+      "round": "Elite 8",
+      "region": "South",
+      "games": [
+        {
+          "consensus_winner": "Florida",
+          "win_pct": 0.2713,
+          "matchup": "Virginia vs Alabama",
+          "all_winners": {
+            "Florida": 0.2713,
+            "Houston": 0.2594,
+            "Illinois": 0.1796,
+            "Virginia": 0.106,
+            "Alabama": 0.0902,
+            "Kentucky": 0.0226,
+            "Santa Clara": 0.0181,
+            "Villanova": 0.0159,
+            "Miami (FL)": 0.013,
+            "Texas A&M": 0.0129,
+            "Missouri": 0.0088,
+            "McNeese": 0.0014,
+            "Hofstra": 0.0006,
+            "North Dakota St.": 0.0002
+          }
+        }
+      ]
+    },
+    {
+      "round": "Round of 64",
+      "region": "Midwest",
+      "games": [
+        {
+          "consensus_winner": "Michigan",
+          "win_pct": 0.931,
+          "matchup": "Michigan vs UMBC",
+          "all_winners": {
+            "Michigan": 0.931,
+            "UMBC": 0.069
+          }
+        },
+        {
+          "consensus_winner": "North Carolina",
+          "win_pct": 0.5204,
+          "matchup": "North Carolina vs Utah St.",
+          "all_winners": {
+            "North Carolina": 0.5204,
+            "Utah St.": 0.4796
+          }
+        },
+        {
+          "consensus_winner": "Vanderbilt",
+          "win_pct": 1.0,
+          "matchup": "Vanderbilt vs VCU",
+          "all_winners": {
+            "Vanderbilt": 1.0
+          }
+        },
+        {
+          "consensus_winner": "Nebraska",
+          "win_pct": 0.8238,
+          "matchup": "Nebraska vs California Baptist",
+          "all_winners": {
+            "Nebraska": 0.8238,
+            "California Baptist": 0.1762
+          }
+        },
+        {
+          "consensus_winner": "Saint Mary's",
+          "win_pct": 0.7193,
+          "matchup": "Saint Mary's vs Miami (OH)",
+          "all_winners": {
+            "Saint Mary's": 0.7193,
+            "Miami (OH)": 0.2807
+          }
+        },
+        {
+          "consensus_winner": "Texas Tech",
+          "win_pct": 0.8929,
+          "matchup": "Texas Tech vs Penn",
+          "all_winners": {
+            "Texas Tech": 0.8929,
+            "Penn": 0.1071
+          }
+        },
+        {
+          "consensus_winner": "Tennessee",
+          "win_pct": 0.6509,
+          "matchup": "Tennessee vs SMU",
+          "all_winners": {
+            "Tennessee": 0.6509,
+            "SMU": 0.3491
+          }
+        },
+        {
+          "consensus_winner": "Iowa St.",
+          "win_pct": 0.8456,
+          "matchup": "Akron vs Iowa St.",
+          "all_winners": {
+            "Iowa St.": 0.8456,
+            "Akron": 0.1544
+          }
+        }
+      ]
+    },
+    {
+      "round": "Round of 32",
+      "region": "Midwest",
+      "games": [
+        {
+          "consensus_winner": "Michigan",
+          "win_pct": 0.7538,
+          "matchup": "Michigan vs North Carolina",
+          "all_winners": {
+            "Michigan": 0.7538,
+            "North Carolina": 0.1259,
+            "Utah St.": 0.113,
+            "UMBC": 0.0073
+          }
+        },
+        {
+          "consensus_winner": "Vanderbilt",
+          "win_pct": 0.6472,
+          "matchup": "Vanderbilt vs Nebraska",
+          "all_winners": {
+            "Vanderbilt": 0.6472,
+            "Nebraska": 0.3279,
+            "California Baptist": 0.0249
+          }
+        },
+        {
+          "consensus_winner": "Texas Tech",
+          "win_pct": 0.5961,
+          "matchup": "Saint Mary's vs Texas Tech",
+          "all_winners": {
+            "Texas Tech": 0.5961,
+            "Saint Mary's": 0.3139,
+            "Miami (OH)": 0.0693,
+            "Penn": 0.0207
+          }
+        },
+        {
+          "consensus_winner": "Iowa St.",
+          "win_pct": 0.5745,
+          "matchup": "Tennessee vs Akron",
+          "all_winners": {
+            "Iowa St.": 0.5745,
+            "Tennessee": 0.2795,
+            "SMU": 0.1015,
+            "Akron": 0.0445
+          }
+        }
+      ]
+    },
+    {
+      "round": "Sweet 16",
+      "region": "Midwest",
+      "games": [
+        {
+          "consensus_winner": "Michigan",
+          "win_pct": 0.5498,
+          "matchup": "Michigan vs Vanderbilt",
+          "all_winners": {
+            "Michigan": 0.5498,
+            "Vanderbilt": 0.2565,
+            "Nebraska": 0.102,
+            "North Carolina": 0.048,
+            "Utah St.": 0.0408,
+            "California Baptist": 0.0024,
+            "UMBC": 0.0005
+          }
+        },
+        {
+          "consensus_winner": "Iowa St.",
+          "win_pct": 0.377,
+          "matchup": "Tennessee vs Saint Mary's",
+          "all_winners": {
+            "Iowa St.": 0.377,
+            "Texas Tech": 0.2923,
+            "Tennessee": 0.1441,
+            "Saint Mary's": 0.1192,
+            "SMU": 0.0369,
+            "Miami (OH)": 0.0153,
+            "Akron": 0.0128,
+            "Penn": 0.0024
+          }
+        }
+      ]
+    },
+    {
+      "round": "Elite 8",
+      "region": "Midwest",
+      "games": [
+        {
+          "consensus_winner": "Michigan",
+          "win_pct": 0.4004,
+          "matchup": "Michigan vs Tennessee",
+          "all_winners": {
+            "Michigan": 0.4004,
+            "Iowa St.": 0.1726,
+            "Vanderbilt": 0.1338,
+            "Texas Tech": 0.1164,
+            "Tennessee": 0.0527,
+            "Nebraska": 0.045,
+            "Saint Mary's": 0.0359,
+            "North Carolina": 0.0188,
+            "Utah St.": 0.0134,
+            "SMU": 0.0057,
+            "Akron": 0.0026,
+            "Miami (OH)": 0.002,
+            "UMBC": 0.0003,
+            "California Baptist": 0.0002,
+            "Penn": 0.0002
+          }
+        }
+      ]
+    },
+    {
+      "round": "Final Four",
+      "region": "Final Four",
+      "games": [
+        {
+          "consensus_winner": "Duke",
+          "win_pct": 0.2867,
+          "matchup": "St. John's vs NC State",
+          "all_winners": {
+            "Duke": 0.2867,
+            "Arizona": 0.2467,
+            "Purdue": 0.1278,
+            "UConn": 0.061,
+            "Gonzaga": 0.0437,
+            "Michigan St.": 0.0413,
+            "Arkansas": 0.0381,
+            "St. John's": 0.0313,
+            "Louisville": 0.0274,
+            "Wisconsin": 0.0224,
+            "Kansas": 0.0217,
+            "UCLA": 0.0099,
+            "Ohio St.": 0.0097,
+            "Iowa": 0.0078,
+            "Clemson": 0.0058,
+            "BYU": 0.0049,
+            "Georgia": 0.0048,
+            "Saint Louis": 0.0027,
+            "NC State": 0.0023,
+            "South Florida": 0.0016,
+            "UCF": 0.001,
+            "TCU": 0.001,
+            "High Point": 0.0003,
+            "UNI": 0.0001
+          }
+        },
+        {
+          "consensus_winner": "Michigan",
+          "win_pct": 0.2657,
+          "matchup": "Virginia vs Michigan",
+          "all_winners": {
+            "Michigan": 0.2657,
+            "Florida": 0.1468,
+            "Houston": 0.131,
+            "Illinois": 0.0921,
+            "Iowa St.": 0.0896,
+            "Vanderbilt": 0.0623,
+            "Texas Tech": 0.0478,
+            "Virginia": 0.0418,
+            "Alabama": 0.0366,
+            "Tennessee": 0.0196,
+            "Nebraska": 0.0163,
+            "Saint Mary's": 0.011,
+            "North Carolina": 0.0069,
+            "Kentucky": 0.0064,
+            "Utah St.": 0.0043,
+            "Santa Clara": 0.0043,
+            "Miami (FL)": 0.004,
+            "Villanova": 0.0039,
+            "Texas A&M": 0.0038,
+            "Missouri": 0.002,
+            "SMU": 0.0014,
+            "Akron": 0.0009,
+            "McNeese": 0.0007,
+            "Miami (OH)": 0.0006,
+            "North Dakota St.": 0.0001,
+            "UMBC": 0.0001
+          }
+        }
+      ]
+    },
+    {
+      "round": "Championship",
+      "region": "Championship",
+      "games": [
+        {
+          "consensus_winner": "Duke",
+          "win_pct": 0.1805,
+          "matchup": "Virginia vs St. John's",
+          "all_winners": {
+            "Duke": 0.1805,
+            "Michigan": 0.1585,
+            "Arizona": 0.1462,
+            "Florida": 0.0762,
+            "Houston": 0.0665,
+            "Purdue": 0.0634,
+            "Illinois": 0.0473,
+            "Iowa St.": 0.0411,
+            "UConn": 0.0266,
+            "Vanderbilt": 0.0257,
+            "Michigan St.": 0.017,
+            "Gonzaga": 0.0168,
+            "Texas Tech": 0.0168,
+            "Alabama": 0.0154,
+            "Arkansas": 0.0137,
+            "Virginia": 0.0132,
+            "St. John's": 0.0118,
+            "Louisville": 0.0099,
+            "Kansas": 0.0084,
+            "Wisconsin": 0.0081,
+            "Nebraska": 0.0054,
+            "Tennessee": 0.0051,
+            "UCLA": 0.0034,
+            "Ohio St.": 0.0032,
+            "Saint Mary's": 0.0031,
+            "Iowa": 0.0022,
+            "North Carolina": 0.0019,
+            "Utah St.": 0.0016,
+            "BYU": 0.0014,
+            "Kentucky": 0.0013,
+            "Clemson": 0.0012,
+            "Santa Clara": 0.0011,
+            "Georgia": 0.0011,
+            "Villanova": 0.001,
+            "Texas A&M": 0.0007,
+            "Saint Louis": 0.0006,
+            "Miami (FL)": 0.0006,
+            "NC State": 0.0006,
+            "Missouri": 0.0005,
+            "SMU": 0.0004,
+            "Miami (OH)": 0.0002,
+            "High Point": 0.0001,
+            "TCU": 0.0001,
+            "UCF": 0.0001
+          }
+        }
+      ]
+    }
+  ]
+}
