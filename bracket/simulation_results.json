@@ -9,19 +9,19 @@
   },
   "final_four": {
     "East": {
-      "name": "Michigan St.",
+      "name": "Kansas",
       "seed": 4
-    },
-    "West": {
-      "name": "Arizona",
-      "seed": 1
     },
     "South": {
       "name": "Florida",
       "seed": 1
     },
+    "West": {
+      "name": "Arizona",
+      "seed": 1
+    },
     "Midwest": {
-      "name": "North Carolina",
+      "name": "Georgia",
       "seed": 8
     }
   }

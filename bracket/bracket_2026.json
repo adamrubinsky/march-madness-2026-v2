@@ -1,64 +1,344 @@
 {
-  "year": 2026,
-  "final_four_site": "Indianapolis",
   "regions": {
     "East": {
-      "site": "DC",
+      "site": "Washington, D.C.",
       "matchups": [
-        [{"seed": 1, "name": "Duke"}, {"seed": 16, "name": "LIU"}],
-        [{"seed": 8, "name": "Ohio St."}, {"seed": 9, "name": "TCU"}],
-        [{"seed": 5, "name": "St. John's"}, {"seed": 12, "name": "UNI"}],
-        [{"seed": 4, "name": "Michigan St."}, {"seed": 13, "name": "Kennesaw St."}],
-        [{"seed": 6, "name": "Louisville"}, {"seed": 11, "name": "South Florida"}],
-        [{"seed": 3, "name": "Kansas"}, {"seed": 14, "name": "Troy"}],
-        [{"seed": 7, "name": "Clemson"}, {"seed": 10, "name": "Iowa"}],
-        [{"seed": 2, "name": "UConn"}, {"seed": 15, "name": "Idaho"}]
-      ]
-    },
-    "West": {
-      "site": "San Jose",
-      "matchups": [
-        [{"seed": 1, "name": "Arizona"}, {"seed": 16, "name": "Siena"}],
-        [{"seed": 8, "name": "Georgia"}, {"seed": 9, "name": "Saint Louis"}],
-        [{"seed": 5, "name": "Wisconsin"}, {"seed": 12, "name": "High Point"}],
-        [{"seed": 4, "name": "Arkansas"}, {"seed": 13, "name": "Wright St."}],
-        [{"seed": 6, "name": "BYU"}, {"seed": 11, "name": "NC State"}],
-        [{"seed": 3, "name": "Gonzaga"}, {"seed": 14, "name": "Hawaii"}],
-        [{"seed": 7, "name": "UCLA"}, {"seed": 10, "name": "UCF"}],
-        [{"seed": 2, "name": "Purdue"}, {"seed": 15, "name": "Queens"}]
+        [
+          {
+            "name": "Duke",
+            "seed": 1
+          },
+          {
+            "name": "Siena",
+            "seed": 16
+          }
+        ],
+        [
+          {
+            "name": "Ohio St.",
+            "seed": 8
+          },
+          {
+            "name": "TCU",
+            "seed": 9
+          }
+        ],
+        [
+          {
+            "name": "St. John's",
+            "seed": 5
+          },
+          {
+            "name": "Northern Iowa",
+            "seed": 12
+          }
+        ],
+        [
+          {
+            "name": "Kansas",
+            "seed": 4
+          },
+          {
+            "name": "Cal Baptist",
+            "seed": 13
+          }
+        ],
+        [
+          {
+            "name": "Louisville",
+            "seed": 6
+          },
+          {
+            "name": "South Florida",
+            "seed": 11
+          }
+        ],
+        [
+          {
+            "name": "Michigan St.",
+            "seed": 3
+          },
+          {
+            "name": "North Dakota St.",
+            "seed": 14
+          }
+        ],
+        [
+          {
+            "name": "UCLA",
+            "seed": 7
+          },
+          {
+            "name": "UCF",
+            "seed": 10
+          }
+        ],
+        [
+          {
+            "name": "UConn",
+            "seed": 2
+          },
+          {
+            "name": "Furman",
+            "seed": 15
+          }
+        ]
       ]
     },
     "South": {
       "site": "Houston",
       "matchups": [
-        [{"seed": 1, "name": "Florida"}, {"seed": 16, "name": "Furman"}],
-        [{"seed": 8, "name": "Miami (FL)"}, {"seed": 9, "name": "Santa Clara"}],
-        [{"seed": 5, "name": "Illinois"}, {"seed": 12, "name": "McNeese"}],
-        [{"seed": 4, "name": "Alabama"}, {"seed": 13, "name": "Hofstra"}],
-        [{"seed": 6, "name": "Kentucky"}, {"seed": 11, "name": "Missouri"}],
-        [{"seed": 3, "name": "Virginia"}, {"seed": 14, "name": "North Dakota St."}],
-        [{"seed": 7, "name": "Villanova"}, {"seed": 10, "name": "Texas A&M"}],
-        [{"seed": 2, "name": "Houston"}, {"seed": 15, "name": "Tennessee St."}]
+        [
+          {
+            "name": "Florida",
+            "seed": 1
+          },
+          {
+            "name": "Prairie View A&M",
+            "seed": 16
+          }
+        ],
+        [
+          {
+            "name": "Clemson",
+            "seed": 8
+          },
+          {
+            "name": "Iowa",
+            "seed": 9
+          }
+        ],
+        [
+          {
+            "name": "Vanderbilt",
+            "seed": 5
+          },
+          {
+            "name": "McNeese",
+            "seed": 12
+          }
+        ],
+        [
+          {
+            "name": "Nebraska",
+            "seed": 4
+          },
+          {
+            "name": "Troy",
+            "seed": 13
+          }
+        ],
+        [
+          {
+            "name": "North Carolina",
+            "seed": 6
+          },
+          {
+            "name": "VCU",
+            "seed": 11
+          }
+        ],
+        [
+          {
+            "name": "Illinois",
+            "seed": 3
+          },
+          {
+            "name": "Penn",
+            "seed": 14
+          }
+        ],
+        [
+          {
+            "name": "Saint Mary's",
+            "seed": 7
+          },
+          {
+            "name": "Texas A&M",
+            "seed": 10
+          }
+        ],
+        [
+          {
+            "name": "Houston",
+            "seed": 2
+          },
+          {
+            "name": "Idaho",
+            "seed": 15
+          }
+        ]
+      ]
+    },
+    "West": {
+      "site": "San Jose",
+      "matchups": [
+        [
+          {
+            "name": "Arizona",
+            "seed": 1
+          },
+          {
+            "name": "LIU",
+            "seed": 16
+          }
+        ],
+        [
+          {
+            "name": "Villanova",
+            "seed": 8
+          },
+          {
+            "name": "Utah St.",
+            "seed": 9
+          }
+        ],
+        [
+          {
+            "name": "Wisconsin",
+            "seed": 5
+          },
+          {
+            "name": "High Point",
+            "seed": 12
+          }
+        ],
+        [
+          {
+            "name": "Arkansas",
+            "seed": 4
+          },
+          {
+            "name": "Hawaii",
+            "seed": 13
+          }
+        ],
+        [
+          {
+            "name": "BYU",
+            "seed": 6
+          },
+          {
+            "name": "NC State",
+            "seed": 11
+          }
+        ],
+        [
+          {
+            "name": "Gonzaga",
+            "seed": 3
+          },
+          {
+            "name": "Kennesaw St.",
+            "seed": 14
+          }
+        ],
+        [
+          {
+            "name": "Miami FL",
+            "seed": 7
+          },
+          {
+            "name": "Missouri",
+            "seed": 10
+          }
+        ],
+        [
+          {
+            "name": "Purdue",
+            "seed": 2
+          },
+          {
+            "name": "Queens",
+            "seed": 15
+          }
+        ]
       ]
     },
     "Midwest": {
       "site": "Chicago",
       "matchups": [
-        [{"seed": 1, "name": "Michigan"}, {"seed": 16, "name": "UMBC"}],
-        [{"seed": 8, "name": "North Carolina"}, {"seed": 9, "name": "Utah St."}],
-        [{"seed": 5, "name": "Vanderbilt"}, {"seed": 12, "name": "VCU"}],
-        [{"seed": 4, "name": "Nebraska"}, {"seed": 13, "name": "California Baptist"}],
-        [{"seed": 6, "name": "Saint Mary's"}, {"seed": 11, "name": "Miami (OH)"}],
-        [{"seed": 3, "name": "Texas Tech"}, {"seed": 14, "name": "Penn"}],
-        [{"seed": 7, "name": "Tennessee"}, {"seed": 10, "name": "SMU"}],
-        [{"seed": 2, "name": "Iowa St."}, {"seed": 15, "name": "Akron"}]
+        [
+          {
+            "name": "Michigan",
+            "seed": 1
+          },
+          {
+            "name": "UMBC",
+            "seed": 16
+          }
+        ],
+        [
+          {
+            "name": "Georgia",
+            "seed": 8
+          },
+          {
+            "name": "Saint Louis",
+            "seed": 9
+          }
+        ],
+        [
+          {
+            "name": "Texas Tech",
+            "seed": 5
+          },
+          {
+            "name": "Akron",
+            "seed": 12
+          }
+        ],
+        [
+          {
+            "name": "Alabama",
+            "seed": 4
+          },
+          {
+            "name": "Hofstra",
+            "seed": 13
+          }
+        ],
+        [
+          {
+            "name": "Tennessee",
+            "seed": 6
+          },
+          {
+            "name": "SMU",
+            "seed": 11
+          }
+        ],
+        [
+          {
+            "name": "Virginia",
+            "seed": 3
+          },
+          {
+            "name": "Wright St.",
+            "seed": 14
+          }
+        ],
+        [
+          {
+            "name": "Kentucky",
+            "seed": 7
+          },
+          {
+            "name": "Santa Clara",
+            "seed": 10
+          }
+        ],
+        [
+          {
+            "name": "Iowa St.",
+            "seed": 2
+          },
+          {
+            "name": "Tennessee St.",
+            "seed": 15
+          }
+        ]
       ]
     }
-  },
-  "first_four": [
-    {"seed": 16, "team_a": "Howard", "team_b": "UMBC", "region": "Midwest"},
-    {"seed": 16, "team_a": "Lehigh", "team_b": "Prairie View", "region": "South"},
-    {"seed": 11, "team_a": "Texas", "team_b": "NC State", "region": "West"},
-    {"seed": 11, "team_a": "SMU", "team_b": "Missouri", "region": "South"}
-  ]
+  }
 }

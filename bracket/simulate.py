@@ -74,7 +74,7 @@ ROUND_NAMES = ["Round of 64", "Round of 32", "Sweet 16", "Elite 8", "Final Four"
 # Vanderbilt always wins Round of 64 (5-seed upset lock).
 # Add more overrides here as picks are finalized.
 LOCKED_UPSETS: dict[tuple[str, str], float] = {
-    ("Vanderbilt", "VCU"): 1.0,
+    ("Vanderbilt", "McNeese"): 1.0,
 }
 
 
